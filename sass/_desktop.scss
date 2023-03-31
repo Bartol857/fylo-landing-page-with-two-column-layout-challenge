@@ -1,0 +1,132 @@
+@media (min-width: 576px) {
+	.section-padding {
+		padding: 50px;
+	}
+}
+
+@media (min-width: 768px) {
+	.section-padding {
+		padding: 75px;
+	}
+	.site {
+		&__header {
+			padding: 60px 75px 10px;
+
+			img {
+				width: 170px;
+			}
+
+			a {
+				margin-left: 50px;
+				font-size: 16px;
+			}
+		}
+		&__section {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			text-align: left;
+
+            h1,
+			h2 {
+				font-size: 42px;
+				font-weight: bold;
+			}
+		}
+
+		&__hero-img {
+			margin-left: 50px;
+			order: 1;
+		}
+
+		&__title {
+			font-size: 32px;
+		}
+
+		&__description {
+			font-size: 18px;
+		}
+
+		&__link {
+			margin: 0;
+		}
+
+		&__testimonial {
+			margin: 20px 0;
+			max-width: 70%;
+
+            p {
+                font-size: 14px;
+
+                span {
+                    font-size: 12px;
+                }
+            }
+		}
+
+        &__author {
+            img{
+                width: 50px;
+            }
+        }
+
+		&__section-middle::before{
+			position: absolute;
+			background: url('../images/bg-curve-desktop.svg') no-repeat;
+			background-size: contain;
+			content:""; 
+			height: 100%;
+			width: 100%;
+			top: -60px;
+			right: 0;
+			z-index: -1;
+		}
+
+		&__section-bottom {
+			.site__text {
+				margin-right: 15px;
+				width: 50%;
+
+				h2 {
+					margin-bottom: 10px;
+				}
+			}
+
+			input {
+				width: 100%;
+			}
+
+			button {
+				width: 50%;
+			}
+		}
+	}
+
+	.footer {
+		&__sections {
+			display: flex;
+			justify-content: space-between;
+			align-items: start;
+		}
+
+		&__links {
+			margin-top: 0;
+			padding-top: 0;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	.site {
+		&__section-top {
+			form {
+				display: flex;
+
+				button {
+					margin-left: 15px;
+					width: 70%;
+				}
+			}
+		}
+	}
+}

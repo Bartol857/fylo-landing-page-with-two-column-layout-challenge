@@ -1,0 +1,290 @@
+@use './colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	text-align: center;
+}
+
+h2,
+nav {
+	font-family: 'Raleway', sans-serif;
+}
+
+h2 {
+	font-size: 16px;
+}
+
+p {
+	font-size: 14px;
+	line-height: 1.5;
+}
+
+form {
+
+	input,
+	button {
+		margin-top: 15px;
+		padding: 15px;
+		width: 100%;
+		font-family: 'Raleway', sans-serif;
+		border: 1px solid $lightgray;
+		border-radius: 5px;
+
+		&::placeholder {
+			color: $lightgray;
+		}
+	}
+
+	button {
+		font-weight: bold;
+		background-color: $brightblue;
+		color: $lightgrayishblue;
+		border: none;
+		box-shadow: 0 5px 15px -10px $verydarkblue;
+		transition: background-color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			background-color: $lightblue;
+		}
+	}
+}
+
+.error {
+	display: none;
+}
+
+.section-padding {
+	padding: 70px 30px;
+}
+
+.site {
+	&__header {
+		display: flex;
+		justify-content: space-between;
+		align-content: center;
+		padding: 30px;
+
+		img {
+			width: 80px;
+		}
+
+		a {
+			margin-left: 15px;
+			font-size: 12px;
+			text-decoration: none;
+			color: $verydarkblue;
+		}
+	}
+
+	&__hero-img {
+
+		img {
+			width: 100%;
+		}
+	}
+
+	&__section-top {
+		h1 {
+			margin: 25px 0;
+			font-size: 24px;
+			font-weight: bold;
+			color: $verydarkblue;
+		}
+
+		p {
+			color: $verydarkblue;
+		}
+	}
+
+	&__section-middle {
+		position: relative;
+		width: 100%;
+		background-color: $lightgrayishblue;
+
+		img {
+			margin: 75px 0;
+		}
+
+		h2 {
+			color: $verydarkblue;
+		}
+
+		p {
+			margin: 15px 0;
+			color: $desaturatedblue;
+			text-align: left;
+		}
+	}
+
+	&__section-middle::before{
+		position: absolute;
+		background: url('../images/bg-curve-mobile.svg') no-repeat;
+		background-size: contain;
+		content:""; 
+		height: 100%;
+		width: 100%;
+		top: -35px;
+		right: 0;
+		z-index: -1;
+	}
+
+	&__link {
+		margin: 0 auto;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 140px;
+		border-bottom: 1px solid $moderatecyan;
+		cursor: pointer;
+
+		p {
+			margin-right: 10px;
+			font-size: 12px;
+			line-height: 0.1;
+			color: $moderatecyan;
+		}
+
+		img {
+			margin: 0;
+		}
+	}
+
+	&__testimonial {
+		margin: 40px auto;
+		padding: 20px;
+		width: 90%;
+		text-align: left;
+		background-color: $white;
+		border-radius: 5px;
+		box-shadow: 0 0 15px -10px $lightgray;
+
+		img {
+			margin: 0;
+			padding: 0;
+		}
+
+		p {
+			margin-top: 0;
+			font-size: 11px;
+		}
+	}
+
+	&__author {
+		display: flex;
+		align-items: center;
+
+		img {
+			margin-right: 15px;
+			width: 30px;
+			border-radius: 50%;
+		}
+
+		p {
+			font-weight: bold;
+		}
+
+		span {
+			display: block;
+			font-size: 8px;
+			font-weight: normal;
+		}
+	}
+
+	&__section-bottom {
+		background-color: $desaturatedblue;
+		color: $lightgrayishblue;
+
+		input,
+		button {
+			width: 80%;
+		}
+	}
+}
+
+.footer {
+	background-color: $verydarkblue;
+	color: $lightgrayishblue;
+	text-align: left;
+
+	img {
+		color: $lightgrayishblue;
+	}
+
+	&__contact-phone,
+	&__contact-email {
+		display: flex;
+		align-items: center;
+		margin: 15px 0;
+
+		img {
+			margin-right: 20px;
+		}
+	}
+
+	&__links {
+		margin: 50px 0;
+	}
+
+	&__link {
+		display: block;
+		margin-top: 15px;
+		text-decoration: none;
+		color: $lightgrayishblue;
+		transition: color 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			color: $lightblue;
+		}
+	}
+
+	&__social-icons {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 20px 0;
+	}
+
+	&__social-icon {
+		position: relative;
+		margin: 5px;
+		padding: 13px;
+		border: 1px solid $lightgrayishblue;
+		border-radius: 50%;
+		color: $lightgrayishblue;
+		transition: all 0.3s;
+		cursor: pointer;
+
+		&:hover {
+			color: $lightblue;
+			border-color: $lightblue;
+		}
+
+		.fa-brands {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			font-size: 12px;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	.attribution {
+		font-size: 11px;
+		text-align: center;
+	}
+	.attribution a {
+		color: hsl(228, 45%, 44%);
+	}
+}
+
+@import './desktop';
